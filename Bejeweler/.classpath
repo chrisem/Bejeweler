@@ -7,5 +7,11 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="/Users/Chris/Documents/Libraries/scalatest_2.9.0-1.8-scaladoc.jar"/>
 	<classpathentry kind="lib" path="/Users/Chris/Documents/Libraries/scalatest_2.9.0-1.8.jar"/>
+	<classpathentry kind="lib" path="/Users/Chris/Documents/Libraries/easymock-3.1/easymock-3.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/Chris/Documents/Libraries/easymock-3.1/easymock-3.1-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/Chris/Documents/Libraries/easymock-3.1/easymock-3.1.jar"/>
+	<classpathentry kind="lib" path="/Users/Chris/Documents/Libraries/objenesis-1.2/objenesis-1.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/Chris/Documents/Libraries/objenesis-1.2/objenesis-1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/Chris/Documents/Libraries/cglib-nodep-2.2.3.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

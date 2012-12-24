@@ -12,10 +12,8 @@ trait GameBoardCapturer {
   def capture: GameBoard
 }
 
-class GameBoardCapturerImpl(params: GameBoardCapturerParams, colourConverter: ColourConverter) {
+class GameBoardCapturerImpl(params: GameBoardCapturerParams, colourConverter: ColourConverter = new ColourConverterImpl, screenGrabber: Robot = new Robot()) {
   type RGB = (Int, Int, Int)
-
-  private val screenGrabber = new Robot()
 
   private val screenArea = new Rectangle(params.topLeft._1,
     params.topLeft._2, params.cellWidth * params.noOfCells, params.cellHeight * params.noOfCells)
@@ -31,8 +29,8 @@ class GameBoardCapturerImpl(params: GameBoardCapturerParams, colourConverter: Co
 
   private def pixelRGB(image: BufferedImage, coord: (Int, Int)) = image.getRGB(coord._1, coord._2)
 
-  private def averageRGB(rgbs: List[RGB]): RGB = {
-    val size = rgbs.size
+  private def averageRGB(rgbs: List[RGB]): (Double, Double, Double) = {
+    val size = rgbs.size.asInstanceOf[Double]
     val totals = rgbs.foldLeft((0, 0, 0))((z: (Int, Int, Int), t: (Int, Int, Int)) => (z._1 + t._1, z._2 + t._2, z._3 + t._3))
     (totals._1 / size, totals._2 / size, totals._3 / size)
   }
